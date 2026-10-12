@@ -1,0 +1,129 @@
+1. What is CSS?
+Answer: CSS is used to make a web page look nice. It changes things like colors, text, and layout.
+Example:
+  p {
+    color: blue;
+  }
+This makes paragraph text blue.
+
+2. What are the types of CSS?
+Answer: There are three ways to add CSS:
+- Inline: written inside an HTML tag.
+  <p style="color: blue;">Hello</p>
+- Internal: written inside a <style> tag in the HTML file.
+  <style>
+    p { color: blue; }
+  </style>
+- External: written in a separate .css file.
+  <link rel="stylesheet" href="styles.css">
+
+3. Which type of CSS is best and why?
+Answer: External CSS is usually best. It keeps styles in one separate file, so they are easier to change and reuse on many pages.
+Example:
+  <link rel="stylesheet" href="styles.css">
+
+4. What is the CSS box model?
+Answer: A web page element is like a box. It has content in the middle, padding around the content, a border around the padding, and margin outside the border.
+Example:
+  .box {
+    padding: 10px;
+    border: 2px solid black;
+    margin: 8px;
+  }
+
+5. What is CSS Grid?
+Answer: CSS Grid helps place items in rows and columns, like items on a shelf.
+Example:
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+This makes two columns.
+
+6. What is responsive web design?
+Answer: Responsive design makes a web page fit different screen sizes, such as phones, tablets, and computers.
+Example:
+  img {
+    max-width: 100%;
+  }
+This keeps an image from being wider than its container.
+
+7. What is CSS specificity?
+Answer: Specificity is how the browser decides which style to use when more than one style matches. A style for an ID usually beats a style for a class, and a class usually beats a tag name.
+Example:
+  p { color: black; }
+  .note { color: blue; }
+  #warning { color: red; }
+If an element has id="warning", its text will be red.
+
+8. What is margin collapsing and when does it occur?
+Answer: Sometimes the vertical margins of two nearby blocks combine into one space instead of being added together.
+Example:
+  .first { margin-bottom: 20px; }
+  .second { margin-top: 30px; }
+The space between these blocks is usually 30px, not 50px.
+
+9. What is the difference between Flexbox and Grid?
+Answer: Flexbox is best for lining items up in one direction, like a row or a column. Grid is best for laying items out in rows and columns.
+Example:
+  .menu { display: flex; }
+  .photo-gallery { display: grid; }
+
+10. What is Flexbox?
+Answer: Flexbox helps line up items in a row or a column and control the space between them.
+Example:
+  .menu {
+    display: flex;
+    gap: 10px;
+  }
+This puts menu items in a row with space between them.
+
+11. What is CSS Grid?
+Answer: CSS Grid is a way to arrange items in rows and columns. For example, it can make a gallery with three columns.
+Example:
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+12. What are media queries?
+Answer: Media queries let you use different styles for different screen sizes.
+Example:
+  @media (max-width: 600px) {
+    .menu {
+      display: block;
+    }
+  }
+On screens 600px wide or smaller, the menu items are placed one under another.
+
+13. What are CSS animations?
+Answer: Animations change an element's style over time, such as making it slowly appear.
+Example:
+  @keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .message {
+    animation: appear 1s;
+  }
+
+14. What is the universal selector?
+Answer: The universal selector (*) selects every element on the page.
+Example:
+  * {
+    box-sizing: border-box;
+  }
+This applies the box-sizing rule to every element.
+
+15. What are CSS transitions?
+Answer: A transition makes a style change happen smoothly, for example when you move your mouse over a button.
+Example:
+  button {
+    background-color: blue;
+    transition: 0.3s;
+  }
+  button:hover {
+    background-color: green;
+  }
